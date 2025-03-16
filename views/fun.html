@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../static/style.css">
 </head>
-<body>
+<body onload="addYear()">
     <header>
         <h1 id="webname">Amelia Kratzer</h1>
         <nav class="navbar">
@@ -23,7 +23,8 @@
     </header>
         <div class="main">
             <h2>Things I love to do for fun</h2>
-            <ul>
+            <button id="showButton" onClick="showList()">Click to see...</button>
+            <ul id="funItems">
                 <li>Play tennis</li>
                 <li>Hike</li>
                 <li>Bake</li>
@@ -31,7 +32,8 @@
             </ul>
         </div>
         <footer>
-            <p>&copy; 2025 designed and coded by Amelia Kratzer</p>
+            <p>Designed and coded by Amelia Kratzer</p>
+            <p id="copyYear"></p>
         </footer>
 </body>
 </html>

@@ -34,8 +34,8 @@ function findTheBanana(array1) {
     });
 }
 
-findTheBanana(L1);
-findTheBanana(L2);
+// findTheBanana(L1);
+// findTheBanana(L2);
 
 function greetingFunc() {
     let d = new Date();
@@ -61,4 +61,51 @@ function greetingFunc() {
 
 if (window.location.href.endsWith("index.html")) {
     greetingFunc();
+}
+
+// Lab 4
+function addYear() {
+    let newD = new Date();
+    let currYear = newD.getFullYear();
+    let T = document.getElementById("copyYear");
+    T.innerHTML = `&copy; ${currYear}`;
+}
+
+function showList() {
+    let funList = document.getElementById("funItems");
+    funList.style.display = "block";
+    let showButton = document.getElementById("showButton");
+    showButton.style.display = "none";
+}
+
+// jQuery
+$("#readMore").click(function() {
+    $("#longerBio").show()
+    $("#readMore").hide()
+    $("#readLess").show()
+});
+
+$("#readLess").click(function() {
+    $("#longerBio").hide()
+    $("#readMore").show()
+    $("#readLess").hide()
+});
+
+function validateForm() {
+    let name = document.getElementById("name");
+    let email = document.getElementById("email");
+    let message = document.getElementById("message");
+    let errorMsg = document.getElementById("missingRequired");
+    if (!name.checkValidity() && !email.checkValidity() && !message.checkValidity()) {
+        errorMsg.innerHTML = "Please fill out the form correctly, so I can get back to you :)"
+    }
+    else if (!name.checkValidity()) {
+        errorMsg.innerHTML = "Please enter a valid name."
+    }
+    else if (!email.checkValidity()) {
+        errorMsg.innerHTML = "Please enter a valid email."
+    }
+    else if (!message.checkValidity()) {
+        errorMsg.innerHTML = "Please enter a valid message."
+    }
 }

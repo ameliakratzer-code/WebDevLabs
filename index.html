@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="./static/script.js" defer></script>
     <meta name="author" content="Amelia Kratzer">
     <meta name="keywords" content="Carnegie Mellon University, Information Systems">
@@ -11,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/style.css">
 </head>
-<body>
+<body onload="addYear()">
     <header>
         <h1 id="webname">Amelia Kratzer</h1>
         <nav class="navbar">
@@ -24,14 +25,19 @@
         <div class="main">
             <h2 id="SiteIntro">Hi, my name is Amelia</h2>
             <img src="static/me.png" alt="Photo of Me" width="400" height="400">
-            <p id="intro">
+            <p id="shortBio">
             I'm a sophomore at Carnegie Mellon University, studying Information Systems with a minor in Artifical Intelligence. 
             I interned last summer at the Statewide California Earthquake Center where I applied machine learning to interpolate seismic hazard data. 
-            Outside of classes, I'm a computer science and physics peer tutor for the Student Academic Success Center.
             </p>
+            <p id="longerBio">
+            Outside of classes, I'm a computer science and physics peer tutor for the Student Academic Success Center. I'm also involved with CMU's Women in Information Systems club where I engage in networking, mentorship, and professional development initiatives.
+            </p>
+            <button id="readMore">Read More</button>
+            <button id="readLess">Read Less</button>
         </div>
         <footer>
-            <p>&copy; 2025 designed and coded by Amelia Kratzer</p>
+            <p>Designed and coded by Amelia Kratzer</p>
+            <p id="copyYear"></p>
         </footer>
 </body>
 </html>

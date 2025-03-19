@@ -21,15 +21,30 @@
             <a href="contact.html">contact</a>
         </nav>
     </header>
-        <div class="main">
-            <h2>Things I love to do for fun</h2>
-            <button id="showButton" onClick="showList()">Click to see...</button>
-            <ul id="funItems">
-                <li>Play tennis</li>
-                <li>Hike</li>
-                <li>Bake</li>
-                <li>Try new cafes</li>
-            </ul>
+        <div class="mainLayout">
+            <div id="item1">
+                <h2>Things I love to do for fun</h2>
+                <ul id="funItems">
+                    <li>Play tennis</li>
+                    <li>Hike</li>
+                    <li>Bake</li>
+                    <li>Try new cafes</li>
+                </ul>
+                <!-- <button id="showButton" onClick="showList()">Click to see...</button> -->
+            </div>
+            <div id="item2">
+                <img src="../static/tennis.png" alt="Tennis in the evening" class="funIMG" width="400" height="400">
+            </div>
+            <div id="item3">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YP8a6ugKQ6Y?si=5MbaEodk-BdKRo6n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div id="item4">
+                <div class="container">
+                    <h2>Need some advice?</h2>
+                    <p id="adviceText">Click the button below to get a random piece of advice!</p>
+                    <button type="submit" class="submit" onClick="getAdvice()">Get Advice</button>
+                </div>
+            </div>
         </div>
         <footer>
             <p>Designed and coded by Amelia Kratzer</p>

@@ -41,7 +41,7 @@ form * {
     text-align: center;
 }
 
-#submit {
+.submit {
     background-color: #123499;
     border: none;
     border-radius: 10px;
@@ -55,9 +55,9 @@ footer p {
     padding: 0;
 }
 
-#funItems {
+/* #funItems {
     display: none;
-}
+} */
 
 #showButton, #readMore, #readLess {
     background-color: #123499;
@@ -74,4 +74,27 @@ footer p {
 #missingRequired {
     color: #123499;
     font-size: 20px;
+}
+
+.funIMG {
+    border-radius: 100%;
+}
+
+.container {
+    border-radius: 100%; 
+    display: inline-block;
+    border-radius: 10%; 
+    box-shadow: 5px 10px 10px #D3D3D3;
+}
+
+.mainLayout {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+#item1, #item2, #item3, #item4, #item1Contact, #item2Contact {
+    width: 40vw;
+    margin: auto;
 }

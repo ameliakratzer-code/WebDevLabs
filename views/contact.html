@@ -21,21 +21,28 @@
             <a href="contact.html">contact</a>
         </nav>
     </header>
-        <div class="main">
-            <h2>Contact Me</h2>
-            <form id="form">
-                <label for="name">Your name (required)</label>
-                <input type="text" id="name" required>
+        <div class="mainLayout">
+            <div id="item1Contact">
+                <h2>Find Me</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6072.897597679555!2d-79.94543018870617!3d40.443202671316136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f21f58679a9f%3A0x88716b461fc4daf4!2sCarnegie%20Mellon%20University!5e0!3m2!1sen!2sus!4v1742395670171!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div id="item2Contact">
+                <h2>Contact Me</h2>
+                <form id="form">
+                    <label for="name">Your name (required)</label>
+                    <input type="text" id="name" required>
 
-                <label for="email">Your email (required)</label>
-                <input type="email" id="email" required>
+                    <label for="email">Your email (required)</label>
+                    <input type="email" id="email" required>
 
-                <label for="comment">Your comment (required)</label>
-                <textarea id="message" cols="30" rows="10" required></textarea>
+                    <label for="comment">Your comment (required)</label>
+                    <textarea id="message" cols="30" rows="10" required></textarea>
 
-                <button type="submit" id="submit" onclick="validateForm()">SEND</button>
-                <p id="missingRequired"></p>
-            </form>
+                    <button type="submit" class="submit" onclick="validateForm()">SEND</button>
+                    <p id="missingRequired"></p>
+                </form>
+            </div>
+        </div>
             <table>
                 <tbody>
                 <tr>
@@ -58,7 +65,6 @@
                  </tr>
                 </tbody>
             </table>
-        </div>
         <footer>
             <p>Designed and coded by Amelia Kratzer</p>
             <p id="copyYear"></p>

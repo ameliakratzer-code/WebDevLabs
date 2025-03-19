@@ -71,25 +71,27 @@ function addYear() {
     T.innerHTML = `&copy; ${currYear}`;
 }
 
-function showList() {
-    let funList = document.getElementById("funItems");
-    funList.style.display = "block";
-    let showButton = document.getElementById("showButton");
-    showButton.style.display = "none";
+// function showList() {
+//     let funList = document.getElementById("funItems");
+//     funList.style.display = "block";
+//     let showButton = document.getElementById("showButton");
+//     showButton.style.display = "none";
+// }
+
+if (window.location.href.endsWith("index.html")) {
+    // jQuery
+    $("#readMore").click(function() {
+        $("#longerBio").show()
+        $("#readMore").hide()
+        $("#readLess").show()
+    });
+
+    $("#readLess").click(function() {
+        $("#longerBio").hide()
+        $("#readMore").show()
+        $("#readLess").hide()
+    });
 }
-
-// jQuery
-$("#readMore").click(function() {
-    $("#longerBio").show()
-    $("#readMore").hide()
-    $("#readLess").show()
-});
-
-$("#readLess").click(function() {
-    $("#longerBio").hide()
-    $("#readMore").show()
-    $("#readLess").hide()
-});
 
 function validateForm() {
     let name = document.getElementById("name");
@@ -108,4 +110,17 @@ function validateForm() {
     else if (!message.checkValidity()) {
         errorMsg.innerHTML = "Please enter a valid message."
     }
+}
+
+// Lab 5
+function getAdvice() {
+    fetch("https://api.adviceslip.com/advice")
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("adviceText").innerText = data.slip.advice;
+    })
+    .catch(error => {
+        console.error("There was an error fetching advice", error);
+        document.getElementById("adviceText").innerText = "Something went wrong. Please try again.";
+    });
 }
